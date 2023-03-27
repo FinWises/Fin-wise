@@ -1,0 +1,45 @@
+main {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    height: 90vh;
+  }
+  
+  section {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    font-family: NeueMontrealBook,Arial,sans-serif;
+  }
+  
+  .section-one {
+    background-color: #D3E0EA;
+  }
+  
+  .section-two {
+    background-color: #1A5F7A;
+  }
+  
+  .section-three {
+    background-color: #D3E0EA;;
+  }
+  
+  .section-four {
+    background-color: #1A5F7A;
+  }
+  
+  section img {
+    width: 500px;
+    border-radius: 10px;
+  }
+  
+  section p {
+    font-size: 55px;
+  }
+  
+  @media only screen and (max-width: 976px) {
+    
+  }
+  
+  
