@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinWise</title>
-    <link rel="stylesheet" href="../styles.css"/>
-    <link rel="stylesheet" href="newsfeed.css"/>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="newsfeed.css" />
+   
+
 </head>
+
 <body>
     <header>
         <div class="header-left">
             <a href="../home/home.html" class="logo">
-                <img id="logo-img" src="../assets/owl-logo.png" alt=""/>
+                <img id="logo-img" src="../assets/owl-logo.png" alt="" />
                 <span>FinWise</span>
             </a>
             <nav id="nav-bar">
@@ -33,21 +37,63 @@
                         <a href="">About</a>
                     </li>
                 </ul>
-                <form id="search-ticker">   
-                    <input type="text" placeholder=" Search ticker...." name="search">   
-                    <button type="submit">Search</button>   
-                </form>  
+
             </nav>
         </div>
-        <div class="header-right">
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+<div class="header-right">
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</div>
+</header>
+<main>
+    <div class= 'top-stocks'>
+    <table>
+        <thead>
+            <tr>
+                <th>${data.symbol} ${data.change} ${data.changesPercentage} </th> <th>${data.symbol} ${data.change} ${data.changesPercentage}</th><th>${data.symbol} ${data.change} ${data.changesPercentage}</th>
+            </tr>
+           
+            <table />
             </div>
-        </div>
-    </header>
-    
-    <script src="home.js"></script>
+
+    </table>
+
+    <div>
+
+    <!--<div class="container swiper">-->
+    <!--    <div class="slide-container">-->
+    <!--        <div class="card-wrapper swiper-wrapper">-->
+    <!--            <div class="card swiper-slide">-->
+                    <div id="wrapper">
+
+                        <div class="card"> <img src="${article.multimedia[0].url}" />
+                            <div class="info">
+                                <h1>${article.title}</h1>
+                                <p>${article.abstract}</p> <a herf=${article.url}>Read More</a>
+                            </div>
+                        </div>
+
+                        <!--<article class="card">-->
+                        <!--    <div class="text"><img src="${article.multimedia[0].url}"></img></div>-->
+                        <!--    <div class="card_content"><span class="card_title">${article.title}</span>-->
+                        <!--        <p class="card_description">${article.abstract}</p><a herf=${article.url}>Read More</a>-->
+                        <!--    </div>-->
+                        <!--</article>-->
+
+                    </div>
+
+                    </div>
+            
+
+</main>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script type='text/javascript' src='config.js'></script>
+<script src="newsfeed.js"></script>
 </body>
+
 </html>

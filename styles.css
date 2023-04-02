@@ -142,7 +142,6 @@ header p {
   #nav-bar ul li a {
     margin-bottom: 7px;
   }
-  
   .menu-icon span {
     position: absolute;
     height: 0.1875em;
@@ -249,3 +248,11 @@ header p {
     width: 100%;
   }
 }
+.currentStocks{
+/*display: grid;*/
+/*grid-template-columns: repeat(3, 1fr);*/
+/*grid-template-rows: 1fr;*/
+/*grid-column-gap: 0px;*/
+/*grid-row-gap: 0px;*/
+display: inline-block;
+}  
