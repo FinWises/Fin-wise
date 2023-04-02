@@ -10,49 +10,83 @@
 </head>
 <body>
     <header>
-        <div class="header-left">
-            <a href="../home/home.html" class="logo">
-                <img id="logo-img" src="../assets/owl-logo.png" alt=""/>
-                <span>FinWise</span>
-            </a>
-            <nav id="nav-bar">
-                <ul>
-                    <li>
-                        <a href="../newsfeed/newsfeed.html" class="active">Newsfeed</a>
-                    </li>
-                    <li>
-                        <a href="./market.html">Market</a>
-                    </li>
-                    <li>
-                        <a href="../watchlist/watchlist.html">Watchlist</a>
-                    </li>
-                    <li>
-                        <a href="">Learn</a>
-                    </li>
-                    <li>
-                        <a href="">About</a>
-                    </li>
-                </ul>
-                <form id="search-ticker">   
-                    <input type="text" placeholder=" Search ticker...." name="search">   
-                    <button type="submit">Search</button>   
-                </form>  
-            </nav>
+        <a href="../home/home.html" class="logo">
+            <img id="logo-img" src="../assets/owl-logo.png" alt=""/>
+            <p>FinWise</p>
+        </a>
+        <div class="hamburger menu-icon">
+            <span></span>
+		    <span></span>
+		    <span></span>
+		    <span></span>
         </div>
-        <div class="header-right">
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </div>
+        <nav id="nav-bar">
+            <ul>
+                <li>
+                    <a href="../newsfeed/newsfeed.html" class="active">Newsfeed</a>
+                </li>
+                <li>
+                    <a href="./market.html">Market</a>
+                </li>
+                <li>
+                    <a href="../watchlist/watchlist.html">Watchlist</a>
+                </li>
+                <li>
+                    <a href="">Learn</a>
+                </li>
+            </ul> 
+        </nav>
     </header>
     <main>
-        <form id="market-search">   
-            <input type="text" placeholder="search ticker...." name="search">   
-            <button type="submit"><img></button>   
-        </form>
+        <div class="search-container">
+            <form id="market-search">   
+                <input id="stock" type="text" placeholder="Search ticker, symbol...." name="search">   
+                <button type="submit"><img src="../assets/search.png" alt=""></button>   
+            </form>
+        </div>
+        <div id="market-data">
+            <div>
+                <h1>Daily Movers</h1>
+            </div>
+            <table class="rwd-table">
+                <thead>
+                    <tr>
+                        <th>Ranking</th>
+                        <th>Symbol</th>
+                        <th>Company</th>
+                        <th>Price</th>
+                        <th>% Change</th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div>
+            <h1>Top Trending</h1>
+        </div>
+        <table class="rwd-table2">
+            <thead>
+                <tr>
+                    <th>Ranking</th>
+                    <th>Symbol</th>
+                    <th>Company</th>
+                    <th>Price</th>
+                    <th>% Change</th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
     </main>
+    <script src="config.js"></script>
     <script src="market.js"></script>
+    <script>
+        hamburger = document.querySelector(".menu-icon");
+        nav = document.querySelector("#nav-bar");
+        hamburger.onclick = function() {
+            hamburger.classList.toggle("active");
+            nav.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>

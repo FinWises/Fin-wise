@@ -10,59 +10,76 @@
 </head>
 <body>
     <header>
-        <div class="header-left">
-            <a href="./home.html" class="logo">
-                <img id="logo-img" src="../assets/owl-logo.png" alt=""/>
-                <span>FinWise</span>
-            </a>
-            <nav id="nav-bar">
-                <ul>
-                    <li>
-                        <a href="" class="active">Newsfeed</a>
-                    </li>
-                    <li>
-                        <a href="../market/market.html">Market</a>
-                    </li>
-                    <li>
-                        <a href="../watchlist/watchlist.html">Watchlist</a>
-                    </li>
-                    <li>
-                        <a href="">Learn</a>
-                    </li>
-                    <li>
-                        <a href="">About</a>
-                    </li>
-                </ul>
-                <form id="search-ticker">   
-                    <input type="text" placeholder=" Search ticker...." name="search">   
-                    <button type="submit">Search</button>   
-                </form>  
-            </nav>
+        <a href="./home.html" class="logo">
+            <img id="logo-img" src="../assets/owl-logo.png" alt=""/>
+            <p>FinWise</p>
+        </a>
+        <div class="hamburger menu-icon">
+            <span></span>
+		    <span></span>
+		    <span></span>
+		    <span></span>
         </div>
-        <div class="header-right">
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </div>
+        <nav id="nav-bar">
+            <ul>
+                <li>
+                    <a href="../newsfeed/newsfeed.html" class="active">Newsfeed</a>
+                </li>
+                <li>
+                    <a href="../market/market.html">Market</a>
+                </li>
+                <li>
+                    <a href="../watchlist/watchlist.html">Watchlist</a>
+                </li>
+                <li>
+                    <a href="">Learn</a>
+                </li>
+            </ul> 
+        </nav>
     </header>
     <main>
         <section class="section-one">
-            <img src ='../assets/finance.jpg'/>
-            <p>Combining the powers of computing with finance to make financial literacy accesible to all.</p>
+            <div class="title-container">
+                <div class="title">
+                    <img id="logo" src="../assets/owl-logo.png" alt=""/>
+                    <h1>FinWise</h1>
+                </div>
+            </div>
+            <div class="bird-container bird-container--one">
+                <div class="bird bird--one"></div>
+            </div>
+            <div class="bird-container bird-container--two">
+                <div class="bird bird--two"></div>
+            </div>
+            <div class="bird-container bird-container--three">
+                <div class="bird bird--three"></div>
+            </div>
+            <div class="bird-container bird-container--four">
+                <div class="bird bird--four"></div>
+            </div>
         </section>
         <section class="section-two">
-            <p>Monitor your investment ideas and keep track of your favorite stocks by building your free Watchlist.</p>
-            <img src ='../assets/how-to-make-money-in-stocks.jpg'/>
+            <h2>FinWise</h2>
+            <p>"At FinWise, we are committed to providing our users with a powerful, reliable, and user-friendly trading platform that empowers them to trade with confidence. Our platform is designed to meet the needs of both novice and experienced traders, offering a wide range of financial instruments, advanced trading tools, and real-time market data.</p><br><br>
+            <p>Our team are passionate about creating a platform that not only meets our users' needs but exceeds their expectations. We understand that trading can be complex and challenging, which is why we are dedicated to providing our users with the education, support, and resources they need to succeed./n</p><br><br>
+            <p>At FinWise, we value transparency, security, and innovation. We are constantly striving to improve our platform, adding new features and functionalities, integrating new markets, and implementing the latest security measures to protect our users' information.</p><br><br>
+            <p>We believe that everyone should have access to the opportunities offered by financial markets, and we are committed to democratizing access to trading through our platform. Join us today and start trading with confidence."</p><br><br>
         </section>
-        <section class="section-three">
+        <!-- <section class="section-three">
             <p>Grow your money and your financial knowledge.</p>
         </section>
         <section class="section-four">
             <p>Fourth Page</p>
-        </section>
+        </section> -->
     </main>
     <script src="home.js"></script>
+    <script>
+        hamburger = document.querySelector(".menu-icon");
+        nav = document.querySelector("#nav-bar");
+        hamburger.onclick = function() {
+            hamburger.classList.toggle("active");
+            nav.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>

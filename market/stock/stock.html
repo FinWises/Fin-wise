@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinWise</title>
+    <link rel="stylesheet" href="../../styles.css"/>
+    <link rel="stylesheet" href="stock.css"/>
+</head>
+<body>
+    <header>
+        <a href="../../home/home.html" class="logo">
+            <img id="logo-img" src="../../assets/owl-logo.png" alt=""/>
+            <p>FinWise</p>
+        </a>
+        <div class="hamburger menu-icon">
+            <span></span>
+		    <span></span>
+		    <span></span>
+		    <span></span>
+        </div>
+        <nav id="nav-bar">
+            <ul>
+                <li>
+                    <a href="../../newsfeed/newsfeed.html" class="active">Newsfeed</a>
+                </li>
+                <li>
+                    <a href="../market.html">Market</a>
+                </li>
+                <li>
+                    <a href="../../watchlist/watchlist.html">Watchlist</a>
+                </li>
+                <li>
+                    <a href="">Learn</a>
+                </li>
+            </ul> 
+        </nav>
+    </header>
+    <main>
+        <div>
+            <section class="stock">
+                <img id="stock-logo" src="../../assets/owl-logo.png" alt="">
+                <div class="stock-info">
+                    <h1 id="company-name">Company Name</h1>
+                    <p id="price">$222.22</p>
+                    <p id="price-change">$1.23 (0.71%)</p>
+                </div>
+            </section>
+            <button>Add to Watchlist</button>
+        </div>
+        <canvas id="canvas"></canvas>
+        <section id="about-stock">
+            <h1>About</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga reprehenderit quam a aut ullam deleniti facilis voluptatibus voluptatem est blanditiis. Nulla voluptatum, alias quam itaque qui quis optio asperiores ad?</p>
+        </section>
+        <section id="overview">
+            <h1>Stock Overview</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga reprehenderit quam a aut ullam deleniti facilis voluptatibus voluptatem est blanditiis. Nulla voluptatum, alias quam itaque qui quis optio asperiores ad?</p>
+        </section>
+    </main>
+    <script src="../config.js">
+
+    </script>
+    <script src="stock.js">
+
+    </script>
+    <script>
+        hamburger = document.querySelector(".menu-icon");
+        nav = document.querySelector("#nav-bar");
+        hamburger.onclick = function() {
+            hamburger.classList.toggle("active");
+            nav.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

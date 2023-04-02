@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/magirosh');
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -16,7 +18,7 @@ header {
   top: 0px;
 }
 
-.header-left {
+header {
   width: 100%;
   height: 10vh;
   background: #03506F;
@@ -24,6 +26,13 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+}
+
+header p {
+  font-family: 'Magirosh', sans-serif;
+  letter-spacing: 2px;
+  font-size: 40px;
+  padding: 0 5px;
 }
 
 .logo {
@@ -48,11 +57,7 @@ header {
   display: flex;
 }
 
-#search-ticker > * {
-  border-radius: 5px;
-}
-
-#nav-bar > ul, #nav-bar > form {
+#nav-bar > ul{
   display: flex;
 }
 
@@ -65,15 +70,16 @@ header {
   text-decoration: none;
   color: #E5E3C9;
   font-family: "Google Sans",Roboto,Arial,sans-serif;
-  font-size: 1.1rem;
-  padding: 10px 25px;
+  font-family: 'Magirosh', sans-serif;
+  font-size: 1.7rem;
+  padding: 5px 25px 0px;
   border-radius: 50px;
   transition: 0.2s;
   margin: 0 5px;
+  letter-spacing: 1px;
 }
 
 #nav-bar ul li a:hover {
-  display: block;
   color: #789395;
   background: #E5E3C9;
   cursor: pointer;
@@ -86,58 +92,160 @@ header {
 }
 
 
-
 @media only screen and (max-width: 976px) {
   .header-left {
     padding: 0 50px;
   }
-
-  /* .logo {
-    margin: auto;
-  } */
-
-  .hamburger {
-    display: block;
-    width: max-content;
-    cursor: pointer;
-    border: solid black;
-    border-radius: 5px;
-  }
   
-  .hamburger .line {
-    width: 30px;
-    height: 3px;
-    background: black;
-    margin: 3px 0;
-    padding: .30vh 0;
-    border-radius: 50px;
+  .menu-icon {
+    cursor: pointer;
+    position: relative;
+    width: 3em;
+    height: 2.25em;
+    display: inline-block;
   }
 
   #nav-bar {
-    height: 400px;
+    height: 0;
     position: absolute;
-    top: 80px;
+    top: 10vh;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 100vw;
     background: #03506F;
     transition: 0.2s;
-    display: flex;
+    overflow: hidden;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
   }
 
-  #nav-bar > ul, #nav-bar > form {
+  #nav-bar.active {
+    height: 45vh;
+    /* position: absolute;
+    z-index: 100; */
+  }
+
+  #nav-bar > ul{
     display: block;
     width: fit-content;
     margin: 80px auto 0 auto;
     text-align: center;
     transition: 0.5s;
-    /* opacity: 0; */
+    opacity: 0;
+  }
+
+  #nav-bar.active > ul {
+    opacity: 1;
   }
 
   #nav-bar ul li a {
     margin-bottom: 7px;
   }
+  
+  .menu-icon span {
+    position: absolute;
+    height: 0.1875em;
+    width: 100%;
+    background-color: #363636;
+    transition: all 250ms ease-in-out;
+    transform: rotate(0deg);
+    /* box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6); */
+  }
+  
+  .menu-icon span:nth-child(1) {
+    top: 0.09375em;
+  }
+  
+  .menu-icon span:nth-child(2),
+  .menu-icon span:nth-child(3) {
+    top: 0.9375em;
+  }
+  
+  .menu-icon span:nth-child(4) {
+    top: 1.875em;
+  }
+  
+  .menu-icon:hover span,
+  .menu-icon:focus span,
+  .menu-icon:active span {
+    background: #E5E3C9;
+  }
+  
+  .menu-icon.active span:nth-child(1),
+  .menu-icon.active span:nth-child(4) {
+    opacity: 0;
+  }
+  
+  .menu-icon.active span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  
+  .menu-icon.active span:nth-child(3) {
+    top: 0.9375em;
+    transform: rotate(-45deg);
+  }
 }
 
+.title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-size: 4rem;
+  line-height: 1;
+  transform: translateY(6rem);
+  -webkit-animation: up 500ms linear forwards;
+          animation: up 500ms linear forwards;
+  z-index: 1;
+  text-shadow: 0px 1px 1px white;
+}
+.title::before, .title::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 1px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+.title::before {
+  top: 1.4rem;
+  -webkit-animation: draw 500ms linear 1s forwards;
+          animation: draw 500ms linear 1s forwards;
+}
+.title::after {
+  bottom: 0.4rem;
+  -webkit-animation: draw 500ms linear 1s forwards;
+          animation: draw 500ms linear 1s forwards;
+}
+
+.title-container {
+  font-size: 0;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0.4rem;
+}
+
+@-webkit-keyframes up {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes up {
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes draw {
+  100% {
+    width: 100%;
+  }
+}
+@keyframes draw {
+  100% {
+    width: 100%;
+  }
+}
