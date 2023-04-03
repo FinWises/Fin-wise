@@ -7,10 +7,12 @@
     <title>FinWise</title>
     <link rel="stylesheet" href="../styles.css"/>
     <link rel="stylesheet" href="market.css"/>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+
 </head>
 <body>
     <header>
-        <a href="../home/home.html" class="logo">
+        <a href="../index.html" class="logo">
             <img id="logo-img" src="../assets/owl-logo.png" alt=""/>
             <p>FinWise</p>
         </a>
@@ -41,42 +43,60 @@
         <div class="search-container">
             <form id="market-search">   
                 <input id="stock" type="text" placeholder="Search ticker, symbol...." name="search">   
-                <button type="submit"><img src="../assets/search.png" alt=""></button>   
+                <button type="submit" onsubmit="window.location.href='stock/stock.html'"><img src="../assets/search.png" alt=""></button>   
             </form>
         </div>
-        <div id="market-data">
-            <div>
-                <h1>Daily Movers</h1>
+        <section class="wrapper">
+            <div id="market-data">
+                <div>
+                    <h1>Daily Movers</h1>
+                </div>
+                <table class="rwd-table">
+                    <thead>
+                        <tr>
+                            <th>Ranking</th>
+                            <th>Symbol</th>
+                            <th>Company</th>
+                            <th>Price</th>
+                            <th>% Change</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+                <div>
+                    <h1>Top Trending</h1>
+                </div>
+                <table id="top-trending" class="rwd-table">
+                    <thead>
+                        <tr>
+                            <th>Ranking</th>
+                            <th>Symbol</th>
+                            <th>Company</th>
+                            <th>Price</th>
+                            <th>% Change</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
-            <table class="rwd-table">
-                <thead>
-                    <tr>
-                        <th>Ranking</th>
+            <div id="watchlist">
+                <h1>Watchlist</h1>
+                <table class="tbl-head" cellpadding="0" cellspacing="0" border="0">
+                    <thead>
+                      <tr>
                         <th>Symbol</th>
-                        <th>Company</th>
                         <th>Price</th>
-                        <th>% Change</th>
+                        <th>Change</th>
                         <th></th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
-        <div>
-            <h1>Top Trending</h1>
-        </div>
-        <table class="rwd-table2">
-            <thead>
-                <tr>
-                    <th>Ranking</th>
-                    <th>Symbol</th>
-                    <th>Company</th>
-                    <th>Price</th>
-                    <th>% Change</th>
-                    <th></th>
-                </tr>
-            </thead>
-        </table>
-    </div>
+                      </tr>
+                    </thead>
+                  </table>
+                  <table class="tbl-content" cellpadding="0" cellspacing="0" border="0">
+                    <tbody id="watchlist-data">
+                    </tbody>
+                  </table>
+                </div>
+        </section>
     </main>
     <script src="config.js"></script>
     <script src="market.js"></script>

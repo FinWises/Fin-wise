@@ -7,10 +7,11 @@
     <title>FinWise</title>
     <link rel="stylesheet" href="../../styles.css"/>
     <link rel="stylesheet" href="stock.css"/>
+    
 </head>
 <body>
     <header>
-        <a href="../../home/home.html" class="logo">
+        <a href="../../index.html" class="logo">
             <img id="logo-img" src="../../assets/owl-logo.png" alt=""/>
             <p>FinWise</p>
         </a>
@@ -39,40 +40,101 @@
     </header>
     <main>
         <section class="stock">
-
             <div class="info-header">
                 <section class="stock-header">
                     <img id="stock-logo" src="../../assets/owl-logo.png" alt="">
                     <div class="stock-info">
-                        <h1 id="company-name">Company Name</h1>
-                        <p id="price">$222.22</p>
-                        <p id="price-change">$1.23 (0.71%)</p>
+                        <h2 id="company-name">Company Name</h2>
+                        <span id="price">$222.22</span>
+                        <span id="price-change">$1.23 (0.71%)</span>
                     </div>
                 </section>
                 <button>Add to Watchlist</button>
             </div>
             <canvas id="canvas"></canvas>
-            <section id="about-stock">
+            <section>
                 <h1>About</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga reprehenderit quam a aut ullam deleniti facilis voluptatibus voluptatem est blanditiis. Nulla voluptatum, alias quam itaque qui quis optio asperiores ad?</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, culpa placeat dolorem earum doloribus quae, aliquid libero eaque officiis cupiditate odit exercitationem dignissimos excepturi velit iste impedit. Non, voluptatem assumenda!</p>
+                <p id="about"></p>
             </section>
-            <section id="overview">
+            <section class="list">
                 <h1>Stock Overview</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga reprehenderit quam a aut ullam deleniti facilis voluptatibus voluptatem est blanditiis. Nulla voluptatum, alias quam itaque qui quis optio asperiores ad?</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, culpa placeat dolorem earum doloribus quae, aliquid libero eaque officiis cupiditate odit exercitationem dignissimos excepturi velit iste impedit. Non, voluptatem assumenda!</p>
+                <ul>
+                    <li>
+                        <span>CEO</span>
+                        <span id="ceo"></span>
+                    </li>
+                    <li>
+                        <span>Location</span>
+                        <span id="location"></span>
+                    </li>
+                    <!-- <li>
+                        <span>Lil Nas X</span>
+                        <span>Montero</span>
+                    </li>
+                    <li>
+                        <span>Japanese Breakfast</span>
+                        <span>Jubilee</span>
+                    </li>
+                    <li>
+                        <span>Jazmine Sullivan</span>
+                        <span>Heaux Tales</span>
+                    </li>
+                    <li>
+                        <span>Sam Fender</span>
+                        <span>Seventeen Going Under</span>
+                    </li> -->
+                </ul>
             </section>
         </section>
-        <section class="key-stats">
-            <h1>Key Statistics</h1>
+        <section class="key-stats list">
+            <h1>Key Stats</h1>
+            <ul>
+                <li>
+                    <span>Sector</span>
+                    <span id="sector"></span>
+                </li>
+                <li>
+                    <span>Today's Range</span>
+                    <span id="price-range"></span>
+                </li>
+                <li>
+                    <span>Beta</span>
+                    <span id="beta"></span>
+                </li>
+                <li>
+                    <span>Average Volumen</span>
+                    <span id="avg-vol"></span>
+                </li>
+                <li>
+                    <span>Market Cap</span>
+                    <span id="mkt-cap"></span>
+                </li>
+                <li>
+                    <span>Industry</span>
+                    <span id="industry"></span>
+                </li>
+                <!-- <li>
+                    <span>Lil Nas X</span>
+                    <span>Montero</span>
+                </li>
+                <li>
+                    <span>Japanese Breakfast</span>
+                    <span>Jubilee</span>
+                </li>
+                <li>
+                    <span>Jazmine Sullivan</span>
+                    <span>Heaux Tales</span>
+                </li>
+                <li>
+                    <span>Sam Fender</span>
+                    <span>Seventeen Going Under</span>
+                </li> -->
+            </ul>
         </section>
     </main>
-    <script src="../config.js">
-
-    </script>
-    <script src="stock.js">
-
-    </script>
+    <script src="../config.js"></script>
+    <script src="../market.js"></script>
+    <script src="stock.js"></script>
     <script>
         hamburger = document.querySelector(".menu-icon");
         nav = document.querySelector("#nav-bar");

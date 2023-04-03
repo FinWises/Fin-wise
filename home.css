@@ -26,20 +26,11 @@ main {
   /* color: #363636; */
 }
 
-.section-one {
-  /* background-color: #D3E0EA; */
-}
-
 .section-two {
-  background-color: #1A5F7A;
-}
-
-.section-three {
-  background-color: #D3E0EA;;
-}
-
-.section-four {
-  background-color: #1A5F7A;
+  margin: 5vw 10vw;
+  z-index: -1;
+  position: relative;
+  /* background-color: #1A5F7A; */
 }
 
 section img {
@@ -48,7 +39,10 @@ section img {
 }
 
 section p {
-  font-size: 55px;
+  font-family: 'Magirosh', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 h1 {
@@ -57,8 +51,6 @@ h1 {
   font-size: 4rem;
   letter-spacing: -3px;
   text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
-  position: relative;
-  z-index: 3;
 }
 
 .section-one {
@@ -271,3 +263,5 @@ h1 {
 @media only screen and (max-width: 976px) {
   
 }
+
+

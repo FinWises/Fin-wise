@@ -14,11 +14,8 @@ body {
 }
 
 header {
-  position: sticky;
   top: 0px;
-}
-
-header {
+  position: sticky;
   width: 100%;
   height: 10vh;
   background: #03506F;
@@ -250,11 +247,3 @@ header p {
     width: 100%;
   }
 }
-.currentStocks{
-/*display: grid;*/
-/*grid-template-columns: repeat(3, 1fr);*/
-/*grid-template-rows: 1fr;*/
-/*grid-column-gap: 0px;*/
-/*grid-row-gap: 0px;*/
-display: inline-block;
-}  

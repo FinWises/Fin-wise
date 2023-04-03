@@ -13,6 +13,11 @@ main {
     justify-content: space-between;
 }
 
+.stock-info {
+    display:flex;
+    flex-direction: column;
+}
+
 .stock-header {
     display: flex;
 }
@@ -21,20 +26,72 @@ main {
     width: 60vw;
     margin: 5vw;
     margin-right: 2.5vw;
-}
-
+    display: flex;
+    flex-direction: column;
+      /* display:  */
+  }
+  
 .key-stats {
     width: 25vw;
-    top: 0px;
-    position: sticky;
-    border: solid black;
-    box-sizing: content-box;
+    top: 10px;
     margin: 5vw;
+    margin-top: 15vh;
     margin-left: 2.5vw;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20vh;
+    height: 60vh;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
 }
 
 p {
-    /* font-size: 100px; */
+    font-size: 25px;
+    font-family: 'Magirosh', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+span {
+    font-family: 'Magirosh', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+.list ul {
+	/* padding: 1.5rem 1.5rem 1.5rem 4em; */
+	border: 0.3rem solid #34495E;
+	columns: 25rem;
+	column-gap: 7rem;
+	column-rule: 4px dotted #34495E;
+	border-radius: 0.5rem;
+}
+
+.list ul > * + * {
+	margin-top: 1rem;
+}
+
+.list li {
+	break-inside: avoid;
+    list-style:none;
+}
+
+.list li span {
+	display: block;
+}
+
+.list li span:first-child {
+	font-size: 1.5em;
+}
+
+.list li span:last-child {
+	font-style: italic;
 }
 
 
