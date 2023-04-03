@@ -1,3 +1,42 @@
 #stock-logo {
     height: 100px;
 }
+
+main {
+    /* margin-top: 100px;
+    margin: 0 10vw; */
+    display: flex;
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stock-header {
+    display: flex;
+}
+
+.stock {
+    width: 60vw;
+    margin: 5vw;
+    margin-right: 2.5vw;
+}
+
+.key-stats {
+    width: 25vw;
+    top: 0px;
+    position: sticky;
+    border: solid black;
+    box-sizing: content-box;
+    margin: 5vw;
+    margin-left: 2.5vw;
+}
+
+p {
+    /* font-size: 100px; */
+}
+
+
+
+

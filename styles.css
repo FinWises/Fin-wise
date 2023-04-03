@@ -30,7 +30,9 @@ header {
 
 header p {
   font-family: 'Magirosh', sans-serif;
-  letter-spacing: 2px;
+  font-family: "Quarto A", "Quarto B", Georgia, Times, "Times New Roman", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", serif;
+  font-size: 100px;
+  letter-spacing: -2px;
   font-size: 40px;
   padding: 0 5px;
 }
