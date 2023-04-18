@@ -6,20 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinWise</title>
-    <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="newsfeed.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles.css" />
 
 
 </head>
 
 <body>
     <header>
-        <div class="header-left">
-            <a href="../home/home.html" class="logo">
+            <a href="../index.html" class="logo">
                 <img id="logo-img" src="../assets/owl-logo.png" alt="" />
                 <span>FinWise</span>
             </a>
+            <div class="hamburger menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav id="nav-bar">
                 <ul>
                     <li>
@@ -29,23 +34,10 @@
                         <a href="../market/market.html">Market</a>
                     </li>
                     <li>
-                        <a href="../watchlist/watchlist.html">Watchlist</a>
+                        <a href="../learn/learn.html">Learn</a>
                     </li>
-                    <li>
-                         <a href="../learn/learn.html">Learn</a>
-                    </li>
-                    
-                </ul>
-
+                </ul> 
             </nav>
-        </div>
-        <div class="header-right">
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </div>
     </header>
     <main>
         <h2>Top Stocks</h2>
@@ -117,6 +109,14 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script type='text/javascript' src='config.js'></script>
     <script src="newsfeed.js"></script>
+    <script>
+        hamburger = document.querySelector(".menu-icon");
+        nav = document.querySelector("#nav-bar");
+        hamburger.onclick = function() {
+            hamburger.classList.toggle("active");
+            nav.classList.toggle("active");
+        }
+    </script>
 </body>
 
 </html>

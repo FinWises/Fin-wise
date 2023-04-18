@@ -2,7 +2,7 @@
 // Variables
 //////////////
 let stock;
-const watchlist = ['AAPL', 'FB', 'MSFT', 'TSLA'];
+const watchlist = [];
 
 
 // ///////////////
@@ -14,13 +14,11 @@ const marketSearch = document.querySelector('#market-search');
 const watchlistData = document.querySelector('#watchlist-data');
 
 
-// marketSearch.addEventListener('submit', searchStock);
+// document.querySelector('#search-bar').addEventListener('click', searchStock);
 
 // function searchStock (event) {
-//     event.preventDefault();
-//     stock = document.querySelector('#stock').value.toUpperCase();
-//     body = document.querySelector('body');
-//     body.innerHTML = ``
+//   event.preventDefault();
+//   localStorage.setItem('stock', `${$('#stock').value}`);
 // }
 
 

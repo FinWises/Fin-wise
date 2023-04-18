@@ -30,7 +30,7 @@
     color: black;
 }
 
-#market-search button {
+#market-search a {
     border: 0;
     border-radius: 50%;
     width: 60px;
@@ -39,12 +39,12 @@
     cursor: pointer;
 }
 
-#market-search button img {
+#market-search a img {
     width: 30px;
     height: 30px;
 }
 
-#market-search button:hover {
+#market-search a:hover {
     color: #789395;
     background: #E5E3C9;
 }
@@ -220,7 +220,7 @@
   }
 
 
-  button {
+  #market-search a {
     display: flex;
     justify-content: center;
     align-items: center;

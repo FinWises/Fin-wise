@@ -1,6 +1,6 @@
-var token = config.MY_API_TOKEN;
-var key = config.SECRET_API_KEY;
-var key2 = fin.My_api_key;
+var token = 'eDTgjiwozGkf4mbFkwGq4AE8AzuGP0KF';
+var key = "HZIza6gou7uA1g0M";
+var key2 = 'fcc6149c4e7180ff4d91bed9487d9545';
 
 
 
